@@ -1,8 +1,8 @@
 const Discord = require('discord.js')
 const client = new Discord.Client({ ws: { intents: 32767 }})
 const mongodb = require('mongoose')
-const server = require('./server')
 const { Collection } = require('discord.js')
+require('dotenv').config()
 
 module.exports = client;
 mongodb.connect(`${process.env.URLDB}`,{
@@ -20,4 +20,8 @@ client.slashCommands = new Collection();
 console.log(process.env.TOKEN)
 
 client.login(process.env.TOKEN)
+client.on('ready', (client) => {
+    console.log('server Listo')
+})
+const server = require('./server')
 

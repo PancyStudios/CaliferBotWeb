@@ -17,12 +17,17 @@ const { match } = require('assert');
 	app.get("/", (req, res) => {
 		const botinfo = getBotInfo()
 		console.log(req.hostname)
-		console.log(req.ip)
+		console.log(req.ip) 
 		res
 		   .status(200)
 		   .render('LandigPage', {botinfo})
 
 
+	})
+	app.get("/dashboard", (req, res) => {
+		res
+		.status(403)
+		.render('dashboardLanding')
 	})
 
 	app.get('/info', (req, res) => {
@@ -84,6 +89,6 @@ const { match } = require('assert');
 
 	});
 
-    app.listen(process.env.PORT, () => {
+    app.listen(3000 || 3001, () => {
         console.log('Servidor Listo.');
     });
