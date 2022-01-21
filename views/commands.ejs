@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html Lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="/icon" type="">
+		<title>CaliferBot Commands</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Un bot de discord multifuncional con comandos personalizados">
+		<meta name="author" content="Turbinal">
+		<meta name="keywords" content="discord-bot, califerbot, califer, discordapi, bot, califerbotwebsite">
+	</head>
+
+	<body>
+		<a href="/"><img class="avatar" src="https://images-ext-2.discordapp.net/external/S5IhP83SZVgyPcqrKg22ArvVccqv3mHjxkMOPMBLq8A/%3Fwidth%3D430%26height%3D430/https/media.discordapp.net/attachments/814949340962881606/890866214283407360/IMG_20210924_021941.jpg" alt="Bot Avatar" ></a>
+		<section class="main-content">
+			<p>Para ver los comandos en discord, usa <code>c!cmd</code> para ver los comandos!</p>
+
+			<% commands.forEach(({ value, name }) => { %>
+				<table style="width: 100%">
+					<h1 style="text-align: center;">
+						<%= name %>
+					<h1>
+					<tr>
+						<th>Nombre del comando</th>
+						<th>Uso</th>
+						<th>Descripción</th>
+						<th>Alias</th>
+					</tr>
+
+					<% value.forEach(({ name, description, aliases, usage }) => {%>
+						<tr>
+							<td><%= name %></td>
+							<td><%= usage %></td>
+							<td><%= description %></td>
+							<td><%= typeof aliases === 'string' ? aliases : aliases.join(', ') %></td>
+						</tr>
+					<% })%>
+				</table>
+			<% }) %>
+		</section>
+	</body>
+	<style>
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: 'Open Sans';
+			font-size: 16px;
+			line-height: 1.5;
+			color: #606c71;
+		}
+
+		.main-content {
+			word-wrap: break-word;
+		}
+
+		@media screen and (min-width: 64em) {
+			.main-content {
+				max-width: 64rem;
+				padding: 2rem 6rem;
+				margin: 0 auto;
+				font-size: 1.1rem;
+			}
+		}
+
+		@media screen and (min-width: 42em) and (min-width: 64em) {
+			.main-content {
+				padding: 2rem 4rem;
+				font-size: 1.1rem;
+
+			}
+		}
+
+		@media screen and (min-width: 42em) {
+			.main-content {
+				padding: 2rem 1rem;
+				font-size: 1rem;
+			}
+		}
+
+		.main-content h1,
+		.main-content h2,
+		.main-content h3,
+		.main-content h4,
+		.main-content h5,
+		.main-content h6 {
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			font-weight: normal;
+			color: #159957;
+		}
+
+		.main-content th,
+		.main-content td {
+			padding: 0.5rem 1rem;
+			border: 1px solid #e9ebec;
+		}
+		.avatar {
+			display: block;  
+			margin-left: auto;
+ 	 	    margin-right: auto;
+			border: 4px solid #7289da;
+			border-radius: 100%;
+			width: 20%;
+			height: 20%;
+			-webkit-transform: -webkit-transform .8s ease-in-out;
+			transition: transform .8s ease-in-out;
+		}
+		.avatar:hover {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+		
+	</style>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="/icon" type="">
+		<title>CaliferBot</title>
+		<meta name="application-name" content="CaliferBot">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Un bot de discord multifuncional con comandos personalizados">
+		<meta name="author" content="Turbinal">
+		<meta name="keywords" content="discord-bot, califerbot, califer, discordapi, bot, califerbotwebsite">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Josefin+Sans&family=Knewave&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+<div>
+	<header>
+		<script src="https://9mg7wxgbpvc1.statuspage.io/embed/script.js"></script>
+		<h1>CaliferBot</h1>
+		<img class="avatar" src="https://images-ext-2.discordapp.net/external/S5IhP83SZVgyPcqrKg22ArvVccqv3mHjxkMOPMBLq8A/%3Fwidth%3D430%26height%3D430/https/media.discordapp.net/attachments/814949340962881606/890866214283407360/IMG_20210924_021941.jpg" alt="Bot Avatar" >
+		<h3>Un bot multifuncional con Moderacion, Utilidad, Copias de seguridad y Proteccion</h3>
+		<p class="description">• Soy un bot bastante completo, con múltiples funciones y aplicaciones.</p>
+
+
+	</header>
+	<body>
+		<div class="buttons">
+			<button class="btn" onclick="location.href = 'https://califerbot.ga/commands'">Comandos</button>
+			<button class="btn" onclick="location.href = 'https://discord.com/oauth2/authorize?client_id=801873281975975968&scope=bot&permissions=8'">Invitacion</button>
+			<button class="btn" onclick="location.href = 'https://discord.gg/WBTdyQSeqd'">Soporte</button>
+		</div>
+	</body>
+    <footer>
+            <% botinfo.forEach(({ value }) => { %>
+               <% value.forEach(({ channels, users, guilds}) => {%>  
+                  <h3>Servidores <%= guilds %>, Usuarios <%= users %>, Canales <%= channels %> </h3>
+                <% }) %> 
+                <% }) %> 
+    </footer>
+</div>
+
+<style>
+	.btn {
+		background-color: #606468;
+		color: orange;
+		font-size: 40px;
+		transition-duration: 0.5s;
+		border: 2px solid #1D2FE1;
+		border-radius: 8px;
+		font-family: 'JoseFin Sans', sans-serif;
+	}
+
+	.buttons {
+		text-align: center;
+	}
+	.btn:hover {
+		background-color: #1D2FE1;
+		color: white;
+		cursor: pointer;
+	}
+
+	h2 {
+		font-size: 125%;
+		font-family: 'Happy Monkey';
+		color: #7289da;
+	}
+
+	.description {
+		color: rgb(180, 180, 255);
+		text-align: center;
+		font-family: 'Fredoka One'
+	}
+
+	.avatar {
+		display: block;  
+		margin-left: auto;
+  	    margin-right: auto;
+		border: 4px solid #7289da;
+		border-radius: 100%;
+		width: 20%;
+		height: 20%;
+		-webkit-transform: -webkit-transform .8s ease-in-out;
+		transition: transform .8s ease-in-out;
+	}
+	.avatar:hover {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+
+	p,
+	span {
+		color: #4caf50;
+	}
+
+	body {
+		background-color: #2c2f33;
+	}
+
+	h3 {
+		color: #7289da;
+		font-family: 'Knewave';
+		text-align: center;
+		font-size: 150%;		
+	}
+
+	h1 {
+		color: #00eaff;
+		font-family: 'Fredoka One';
+		text-align: center;
+		font-size: 300%;	
+	}
+
+</style>
+</html>
