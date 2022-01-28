@@ -36,8 +36,33 @@ const { match } = require('assert');
 		   .send(Detalles)
 	})
 
-	app.get('/icon', (req, res) => {
-		res.sendFile(path.join(__dirname, '/icon.webp'));
+	app.get('/assets/images/icon', (req, res) => {
+		res
+		.status(204)
+		.sendFile(path.join(__dirname, '/assets/images/icon.webp'));
+	})
+	app.get('/assets/images/iconerror', (req, res) => {
+		res
+		.status(204)
+		.sendFile(path.join(__dirname, '/assets/images/26a0.png'))
+	})
+	app.get('/assets/styles/landingpage.css', (req, res) => {
+		res
+		.status(204)
+		.sendFile(path.join(__dirname,'/assets/styles/LandingPage.css'))
+	})
+	app.get('/assets/styles/errorpage.css', (req, res) => {
+		res
+		.status(204)
+		.sendFile(path.join(__dirname,'/assets/styles/ErrorPage.css'))
+	})
+	app.get('/assets/styles/commands.css', (req, res) => {
+		res
+		.status(204)
+		.sendFile(path.join(__dirname,'/assets/styles/CommandsPage.css'))
+	})
+	app.get('/assets',(req,res) => {
+		res.sendStatus(403)
 	})
 	app.get('/prueba', (req, res) => {
 		const botinfo = getBotInfo()

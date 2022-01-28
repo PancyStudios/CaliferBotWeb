@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Dashboard</title>
-		<link rel="icon" href="/assets/icon" type="">
-		<meta charset="UTF-8">
-		<meta name="application-name" content="CaliferBot">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- Insertamos los estilos-->
-		<link rel="sylesheet" href="/pages/style2.css"/>
-	</head>
-<div>
-	<header>
-		<h1>PROXIMAMENTE</h1> 
-        <h3>La pagina que intentas acceder se encuentra aun en desarrollo pronto estara disponible</h3>
-	</header>
-	<body>
-		<div class="buttons">
-			<button class="btn" onclick="location.href= 'https://califerbot.ga/'">Pagina principal</button>
-	</body>
-</div>
-<style>
 	.btn {
 		background-color: #606468;
 		color: #F4D10B;
@@ -85,5 +63,3 @@
 		text-align: center;
 		font-size: 300%;	
 	}
-</style>
-</html>
