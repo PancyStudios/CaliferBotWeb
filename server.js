@@ -38,27 +38,22 @@ const { match } = require('assert');
 
 	app.get('/assets/images/icon', (req, res) => {
 		res
-		.status(204)
 		.sendFile(path.join(__dirname, '/assets/images/icon.webp'));
 	})
 	app.get('/assets/images/iconerror', (req, res) => {
 		res
-		.status(204)
 		.sendFile(path.join(__dirname, '/assets/images/26a0.png'))
 	})
 	app.get('/assets/styles/landingpage.css', (req, res) => {
 		res
-		.status(204)
 		.sendFile(path.join(__dirname,'/assets/styles/LandingPage.css'))
 	})
 	app.get('/assets/styles/errorpage.css', (req, res) => {
 		res
-		.status(204)
 		.sendFile(path.join(__dirname,'/assets/styles/ErrorPage.css'))
 	})
 	app.get('/assets/styles/commands.css', (req, res) => {
 		res
-		.status(204)
 		.sendFile(path.join(__dirname,'/assets/styles/CommandsPage.css'))
 	})
 	app.get('/assets',(req,res) => {
