@@ -4,42 +4,43 @@
 		<meta charset="UTF-8">
 		<link rel="icon" href="/assets/images/icon" type="">
 		<title>CaliferBot</title>
-		<meta name="application-name" content="CaliferBot">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Un bot de discord multifuncional con comandos personalizados">
-		<meta name="author" content="Turbinal">
-		<meta name="keywords" content="discord-bot, califerbot, califer, discordapi, bot, califerbotwebsite">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Josefin+Sans&family=Knewave&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="/assets/styles/landingpage.css">
+		<meta name="application-name" content="CaliferBot"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Un bot de discord multifuncional con comandos personalizados"/>
+		<meta name="author" content="ElTurbinal"/>
+		<meta name="keywords" content="discord-bot, califerbot, califer, discordapi, bot, califerbotwebsite"/>
+		<meta name="google-site-verification" content="PUWswzt7coCvz52M3NWJxKSkCo4638uE5kWdp9-oC6o" />
 	</head>
 	<div>
 		<header>
-			<script src="https://9mg7wxgbpvc1.statuspage.io/embed/script.js"></script>
+			<link rel="stylesheet" href="/assets/styles/landingpage.css">
+			<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Josefin+Sans&family=Knewave&display=swap" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<h1>CaliferBot</h1>
-			<img class="avatar" src="https://images-ext-2.discordapp.net/external/S5IhP83SZVgyPcqrKg22ArvVccqv3mHjxkMOPMBLq8A/%3Fwidth%3D430%26height%3D430/https/media.discordapp.net/attachments/814949340962881606/890866214283407360/IMG_20210924_021941.jpg" alt="Bot Avatar" >
+			<img class="avatar" src="/assets/images/avatar" alt="Bot Avatar" >
 			<h3>Un bot multifuncional con Moderacion, Utilidad, Copias de seguridad y Proteccion</h3>
 			<p class="description">• Soy un bot bastante completo, con múltiples funciones y aplicaciones.</p>
-
-
 		</header>
 		<body>
 			<div class="buttons">
 				<button class="btn" onclick="location.href = 'https://califerbot.ga/commands'">Comandos</button>
 				<button class="btn" onclick="location.href = 'https://discord.com/oauth2/authorize?client_id=801873281975975968&scope=bot&permissions=8'">Invitacion</button>
 				<button class="btn" onclick="location.href = 'https://discord.gg/WBTdyQSeqd'">Soporte</button>
-				<button class="btn" onclick="location.href = 'https://califerbot.ga/dashboard'">Dashboard</button>
+				<button class="btn" onclick="location.href = 'https://dashboard.califerbot.ga/'">Dashboard</button>
 			</div>
-		</body>
+		</body
 		<footer>
 				<% botinfo.forEach(({ value }) => { %>
 				<% value.forEach(({ channels, users, guilds}) => {%>  
 					<h3>Servidores <%= guilds %>, Usuarios <%= users %>, Canales <%= channels %> </h3>
 					<% }) %> 
 					<% }) %> 
-
+		         
+				<h4 class="owner">Desarrollado por "El Turbinas"<h4>
 				<h4 class="copyright">Copyright © 2020 - 2022<h4>
 		</footer>
 	</div>
+	
+	<script src="https://9mg7wxgbpvc1.statuspage.io/embed/script.js"></script>
 </html>

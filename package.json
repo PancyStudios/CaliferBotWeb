@@ -42,6 +42,7 @@
     "nekos.life": "^2.0.7",
     "node-fetch": "^2.6.1",
     "novelcovid": "^3.0.0",
+    "php": "^1.0.2",
     "ping-monitor": "^0.5.2",
     "random-puppy": "^1.1.0",
     "spa-system": "^1.0.7",

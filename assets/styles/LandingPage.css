@@ -6,6 +6,7 @@
 		transition-duration: 0.5s;
 		border: 2px solid #1D2FE1;
 		border-radius: 8px;
+		margin: 10px;
 		font-family: 'JoseFin Sans', sans-serif;
 	}
 
@@ -22,10 +23,14 @@
 		text-align: center;
 		color: #606468;
 	}
-
+	
+	.owner {
+		text-align: center;
+		color: #606468;
+	} 
 	h2 {
 		font-size: 125%;
-		font-family: 'Happy Monkey';
+		font-family: 'Fredoka One';
 		color: #7289da;
 	}
 
@@ -43,7 +48,6 @@
 		border-radius: 100%;
 		width: 20%;
 		height: 20%;
-		-webkit-transform: -webkit-transform .8s ease-in-out;
 		transition: transform .8s ease-in-out;
 	}
 	.avatar:hover {
@@ -62,7 +66,7 @@
 
 	h3 {
 		color: #7289da;
-		font-family: 'Knewave';
+		font-family: 'Fredoka One';
 		text-align: center;
 		font-size: 150%;		
 	}

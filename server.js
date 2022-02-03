@@ -4,12 +4,18 @@ const express = require('express')
 const { getCommands, getBotInfo } = require('./utils')
 const path = require('path');
 const { match } = require('assert');
+const php = require('php')
+
+php.disableRegisterGlobalModel()
+
 
 	const port = process.env.PORT || 3001
 
 	const app = express();
     const bodyParser = require("body-parser");
-
+	
+	app.set('view engine', 'php');
+	app.engine('php', php.__express)
 	app.set("view engine", "ejs");
 	app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,16 +26,15 @@ const { match } = require('assert');
 		console.log(req.ip) 
 		res
 		   .status(200)
-		   .render('LandigPage', {botinfo})
+		   .render('LandigPage.ejs', {botinfo})
 
 
 	})
 	app.get("/dashboard", (req, res) => {
 		res
 		.status(403)
-		.render('dashboardLanding')
+		.render('dashboardLanding.ejs')
 	})
-
 	app.get('/info', (req, res) => {
 		res
 		   .status(200)
@@ -56,28 +61,38 @@ const { match } = require('assert');
 		res
 		.sendFile(path.join(__dirname,'/assets/styles/CommandsPage.css'))
 	})
+	//IMG_20210924_021941
+	app.get('/assets/images/avatar', (req, res) => {
+		res.sendFile(path.join(__dirname, '/assets/images/IMG_20210924_021941.jpg'))
+	})
+	//assert
 	app.get('/assets',(req,res) => {
 		res.sendStatus(403)
-	})
-	app.get('/prueba', (req, res) => {
-		const botinfo = getBotInfo()
-		res
-		   .status(200)
-		   .render('LandigPage', {botinfo})
+	})  
+	app.get('/prueba', async(req, res) => {
+		try {
+		await res.render('test.php', {
+    		_REGISTER_GLOBAL_MODEL: false,
+		})
+		} catch (err) {
+			res.sendStatus(503)
+		}
 	})
 
 	app.get("/commands", (req, res) => {
 		const commands = getCommands();
 		res
 		   .status(200)
-		   .render('commands', {commands})
+		   .render('commands.ejs', {commands})
 	})
 
 	app.get("*", (req, res) => {
 		res
 		   .status(404)
-		   .render('ErrorPage')
+		   .render('ErrorPage.ejs')
 	})
+
+
 
 	app.post("/logs", (req, res) => {
 		const Payload = req.body;
