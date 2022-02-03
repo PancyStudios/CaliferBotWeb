@@ -9,7 +9,7 @@ const php = require('php')
 php.disableRegisterGlobalModel()
 
 
-	const port = process.env.PORT || 3001
+	const port = process.env.PORT ?? (3000 || 3001)
 
 	const app = express();
     const bodyParser = require("body-parser");
@@ -90,6 +90,14 @@ php.disableRegisterGlobalModel()
 		res
 		   .status(404)
 		   .render('ErrorPage.ejs')
+	})
+
+	app.get('/support', (req, res) => {
+		res.redirect(301, 'https://discord.gg/x8wwv2RkD9')
+	})
+
+	app.get('/invite', (req, res) => {
+		res.redirect(301, 'https://discord.com/api/oauth2/authorize?client_id=801873281975975968&permissions=8&scope=bot%20applications.commands')
 	})
 
 
